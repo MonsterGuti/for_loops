@@ -1,0 +1,20 @@
+months = int(input("Enter the number of months: "))
+water_bill = 20
+tv_bill = 15
+electricity_bill_total = 0
+other = 0
+
+for _ in range(months):
+    electricity_bill = float(input("Enter the electricity bill for the month: "))
+    other += 1.2 * (electricity_bill + water_bill + tv_bill)
+    electricity_bill_total += electricity_bill
+
+water_bill_total = water_bill * months
+tv_bill_total = tv_bill * months
+average = (electricity_bill_total + water_bill_total + tv_bill_total + other) / months
+
+print(f"Total Electricity: {electricity_bill_total:.2f} lv")
+print(f"Total Water: {water_bill_total:.2f} lv")
+print(f"Total Internet: {tv_bill_total:.2f} lv")
+print(f"Total Other: {other:.2f} lv")
+print(f"Average monthly expense: {average:.2f} lv")
