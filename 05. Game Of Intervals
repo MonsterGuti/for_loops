@@ -1,0 +1,39 @@
+moves = int(input("Enter the number of moves: "))
+result = 0
+case1 = case2 = case3 = case4 = case5 = case6 = 0
+
+for _ in range(moves):
+    num = int(input("Enter a number: "))
+    if 0 <= num <= 9:
+        case1 += 1
+        result += 0.2 * num
+    elif 10 <= num <= 19:
+        case2 += 1
+        result += 0.3 * num
+    elif 20 <= num <= 29:
+        case3 += 1
+        result += 0.4 * num
+    elif 30 <= num <= 39:
+        case4 += 1
+        result += 50
+    elif 40 <= num <= 50:
+        case5 += 1
+        result += 100
+    else:
+        case6 += 1
+        result /= 2
+
+case1_percent = case1 / moves * 100
+case2_percent = case2 / moves * 100
+case3_percent = case3 / moves * 100
+case4_percent = case4 / moves * 100
+case5_percent = case5 / moves * 100
+case6_percent = case6 / moves * 100
+
+print(f"Total score: {result:.2f}")
+print(f"From 0 to 9: {case1_percent:.2f}%")
+print(f"From 10 to 19: {case2_percent:.2f}%")
+print(f"From 20 to 29: {case3_percent:.2f}%")
+print(f"From 30 to 39: {case4_percent:.2f}%")
+print(f"From 40 to 50: {case5_percent:.2f}%")
+print(f"Invalid numbers: {case6_percent:.2f}%")
