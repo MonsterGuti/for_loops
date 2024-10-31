@@ -1,0 +1,26 @@
+capacity = int(input("Enter the stadium capacity: "))
+fans = int(input("Enter the number of fans: "))
+A = B = V = G = 0
+
+for _ in range(fans):
+    sector = input("Enter the sector (A, B, V, G): ")
+    if sector == "A":
+        A += 1
+    elif sector == "B":
+        B += 1
+    elif sector == "V":
+        V += 1
+    elif sector == "G":
+        G += 1
+
+sectorA_percent = A / fans * 100
+sectorB_percent = B / fans * 100
+sectorV_percent = V / fans * 100
+sectorG_percent = G / fans * 100
+fans_percent = fans / capacity * 100
+
+print(f"Percentage of fans in sector A: {sectorA_percent:.2f}%")
+print(f"Percentage of fans in sector B: {sectorB_percent:.2f}%")
+print(f"Percentage of fans in sector V: {sectorV_percent:.2f}%")
+print(f"Percentage of fans in sector G: {sectorG_percent:.2f}%")
+print(f"Percentage of stadium capacity filled by fans: {fans_percent:.2f}%")
