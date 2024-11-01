@@ -1,0 +1,24 @@
+n = int(input("Enter the number of pairs (n): "))
+previous_sum = None
+max_difference = 0
+equal_values = True
+
+for _ in range(n):
+    num1 = int(input("Enter first number of pair: "))
+    num2 = int(input("Enter second number of pair: "))
+    current_sum = num1 + num2
+
+    if previous_sum is not None:
+        difference = abs(previous_sum - current_sum)
+        if difference > max_difference:
+            max_difference = difference
+        if previous_sum != current_sum:
+            equal_values = False
+
+    previous_sum = current_sum
+
+# Печат на резултата
+if equal_values:
+    print(f"Yes, value={previous_sum}")
+else:
+    print(f"No, maxdiff={max_difference}")
