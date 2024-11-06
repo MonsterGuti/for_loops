@@ -1,0 +1,30 @@
+from random import sample
+
+my_nums = []
+win_nums = sample(range(1, 50), 6)
+print("enter six numbers from 1 to 49:")
+for _ in range(6):
+    num = int(input("number: "))
+    if num < 1 or num > 49 or num in my_nums or num % 1 != 0:
+        print("Error, enter different number:")
+        num = int(input("number: "))
+    my_nums.append(num)
+
+matches = len(set(my_nums) & set(win_nums))
+
+if matches == 6:
+    prize = "Jackpot!"
+elif matches == 5:
+    prize = "500 lv"
+elif matches == 4:
+    prize = "40 lv"
+elif matches == 3:
+    prize = "lv лв"
+else:
+    prize = "No money"
+
+print()
+print("Вашите числа:", my_nums)
+print("Печеливши числа:", win_nums)
+print("Познати числа:", matches)
+print("Печалба:", prize)
