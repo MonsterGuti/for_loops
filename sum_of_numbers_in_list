@@ -1,0 +1,15 @@
+from random import sample
+
+my_list = sample(range(1, 101), 10)
+my_new_list = []
+
+for i in range(len(my_list) - 1):
+    num1 = my_list[i]
+    num2 = my_list[i + 1]
+    my_new_list.append(num1)
+    my_new_list.append(f"({num1 + num2})")
+
+my_new_list.append(my_list[-1])
+
+print("my_list:", my_list)
+print("my_new_list:", my_new_list)
