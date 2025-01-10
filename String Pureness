@@ -1,0 +1,9 @@
+number_of_strings = int(input("Enter the number of words: "))
+for i in range(number_of_strings):
+    my_string = input("Enter a word: ")
+    for char in my_string:
+        if char == "," or char == "." or char == "_":
+            print(f"{my_string} is not pure!")
+            break
+    else:
+        print(f"{my_string} is pure.")
