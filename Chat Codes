@@ -1,0 +1,11 @@
+number = int(input("Enter a number of commands: "))
+for i in range(number):
+    code = int(input("Enter the code: "))
+    if code == 88:
+        print("Hello")
+    elif code == 86:
+        print("How are you?")
+    elif code != 86 and code != 88 and code < 88:
+        print("GREAT!")
+    elif code > 88:
+        print("Bye.")
