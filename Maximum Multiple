@@ -1,0 +1,6 @@
+first_num = int(input())
+limit = int(input())
+for i in range(limit, first_num, -1):
+    if i % first_num == 0:
+        print(i)
+        break
